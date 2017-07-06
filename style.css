@@ -1,0 +1,107 @@
+     #wrap{
+      width:940px;
+      margin: 0 auto;
+     }
+.slider{
+    background: black;
+    height: 380px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slider img{
+    width: 0;
+    opacity: 0;
+    position: relative;
+    transition: all 1s linear;
+}
+ 
+img.active{     
+    width: 940px;
+    height: 380px;
+    display: block;
+    float: left;
+    opacity: 1;
+    transition: all 1.2s linear;
+}
+
+.indicator{
+    margin: auto;
+    width: 200px;
+    position: absolute;
+    top: 350px;
+    left: 620px;
+}
+
+.effect, #first:hover, #second:hover, #third:hover, #fourth:hover{
+    background: transparent;
+    border-style: dotted;
+}
+
+#first, #second, #third, #fourth{
+    position: relative;
+}
+    
+#first:hover div img, #second:hover div img, #third:hover div img, #fourth:hover div img{
+    width: 160px;
+    height: 80px;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+    
+#first div img, #second div img, #third div img, #fourth div img{
+    width: 0px;
+    height: 0px;
+    transition: opacity 0.6s cubic-bezier(1, 0.01, 0, 0.88);
+    position: absolute;
+    top: -90px;
+    left: -80px;
+    opacity: 0;
+}
+
+span{
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: inline-block;
+    cursor: pointer;  
+}
+
+button{
+    width: 10%;
+    background: transparent;
+    color: #000;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+    
+#nxt{
+    position: absolute;
+    right: 0;
+}
+
+.fa{
+    font-size: 50px;
+    color: gray;
+    position: absolute;
+    top: 200px;
+    cursor: pointer;
+}
+    
+.fa-chevron-right, .fa-chevron-left{
+    position: absolute;
+    top:200px;
+}
+
+.fa-chevron-left{
+    left:0px
+}
+
+.fa-chevron-right{
+    right:0px
+}
+
